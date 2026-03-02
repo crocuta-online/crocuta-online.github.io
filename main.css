@@ -62,6 +62,21 @@ main
     font-size: 25px;
 }
 
+.social-icon:visited
+{
+    color:#eee;
+}
+
+.social-icon:hover
+{
+    color:#a0d7d5;
+}
+
+.social-icon:active
+{
+    color:#76c6da;
+}
+
 .social-icon i /* font awesome icon will shrink if I dont specify*/
 {
     width:100%;
