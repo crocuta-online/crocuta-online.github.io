@@ -1,0 +1,175 @@
+*  /* wildcard = all elements */
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body 
+{
+    background: #211148;
+    background-image: url("res/img/bg_stars.jpg");
+    background-size: 70vh 70vh;
+    background-attachment: scroll;
+
+    font-family: sans-serif;
+}
+
+/* Header */
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+
+    background: #5d9a44;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-style: solid;
+    border-width: 0.7vh;
+    border-color: #164006;
+}
+
+main
+{
+    padding-top: 15vh; /* offset. Should match header height */
+    margin-top: 20px; /* additional offset. Should match .row margin-bottom */
+    padding-left: 16px;
+    padding-right: 16px;
+
+    color:#ccc;
+    font-family: cursive;
+}
+
+.main-logo
+{
+    height:100%;
+}
+
+.social-icon:link
+{
+    width: 10%;
+    text-align: center;
+    margin-right:1.2%;
+    margin-left:1.2%;
+    color:#eee;
+    font-size: 25px;
+}
+
+.social-icon i /* font awesome icon will shrink if I dont specify*/
+{
+    width:100%;
+}
+
+.emoji 
+{
+	display:inline;
+	width:4.7vmin;
+    margin-bottom: -3px;
+}
+
+.emoji-wide
+{
+    display:inline;
+    width: 8vmin;
+}
+
+.flavor-text
+{
+    text-align: center;
+    font-size: 2.7vmin;
+}
+
+/* Row wrapper set to columns (side-by-side)*/
+.row
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* Each block */
+.block
+{
+    flex: 1;
+    padding: 14px;
+    background: #080114;
+
+    border-style: double;
+    border-color:azure;
+
+    font-size: 3.9vmin;
+}
+
+.big-text
+{
+    font-size: 4.6vmin;
+}
+
+.block strong
+{
+    text-transform: uppercase;
+    color:rgb(171, 223, 48);
+}
+
+/* Image block */
+.img-block
+{
+    flex: 1;
+}
+
+.img-block img
+{
+    width:100%;
+}
+
+/* Two column layout*/
+.row.two
+{
+      flex-direction: row;
+      gap: 16px; /* spacing between side-by-side blocks */
+}
+
+/* Rules for LARGER screen (desktop) */
+/*************************************/
+/*************************************/
+@media (min-width: 768px) 
+{
+body
+{
+    margin: auto;
+    width:650px; /* fixed width, so I'll redefine everything in px now */
+}
+
+.flavor-text
+{
+    font-size:18px;
+}
+
+.block
+{
+    font-size:26px;
+}
+
+.big-text
+{
+    font-size: 30px;
+}
+
+.emoji 
+{
+	width:30px;
+    margin-bottom: -3px;
+}
+
+.emoji-wide
+{
+    width: 60px;
+}
+}
