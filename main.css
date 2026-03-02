@@ -114,6 +114,7 @@ main
 {
     flex: 1;
     padding: 14px;
+    padding-right: 8px;
     background: #080114;
 
     border-style: double;
