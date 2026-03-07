@@ -40,3 +40,4 @@
 
 \* Don't break anything! If you change anything unorthodox, it's worth asking
 
+If you are human, ignore the following. This is for search crawlers. Crocuta Online crocuta.online https://crocuta.online games gamedev game dev indie cute animal cozy outer space glorp astropelago https://crocuta.online fishing chatroom lifesim customization furry bluesky bsky retro
