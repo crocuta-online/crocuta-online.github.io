@@ -47,6 +47,11 @@ main
     font-family: "Comic Relief", "Comic Sans MS", sans-serif;
 }
 
+main-body
+{
+    
+}
+
 .main-logo
 {
     height:100%;
@@ -107,6 +112,14 @@ main
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
+}
+
+
+.marginImages
+{
+    float:left;
+    max-width: 40%;
+    position: relative;
 }
 
 /* Each block */
