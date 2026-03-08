@@ -34,6 +34,9 @@ header
     border-style: solid;
     border-width: 0.7vh;
     border-color: #164006;
+
+    /*Keeps above animations-- if something is going on top, increase this value*/
+    z-index: 1;
 }
 
 main
@@ -47,14 +50,15 @@ main
     font-family: "Comic Relief", "Comic Sans MS", sans-serif;
 }
 
-main-body
-{
-    
-}
-
 .main-logo
 {
     height:100%;
+    
+}
+
+.main-logo:hover
+{
+animation:wiggle 0.25s linear infinite alternate;
 }
 
 .social-icon:link
@@ -75,6 +79,7 @@ main-body
 .social-icon:hover
 {
     color:#a0d7d5;
+    animation:boing 0.25s ease-in-out;
 }
 
 .social-icon:active
@@ -114,12 +119,10 @@ main-body
     margin-bottom: 20px;
 }
 
-
+/* disables side margin images for mobile*/
 .marginImages
 {
-    float:left;
-    max-width: 40%;
-    position: relative;
+display: none;
 }
 
 /* Each block */
@@ -133,6 +136,8 @@ main-body
     border-color:azure;
 
     font-size: 3.9vmin;
+
+    animation: bob 7s ease-in-out infinite;
 }
 
 .big-text
@@ -150,6 +155,7 @@ main-body
 .img-block
 {
     flex: 1;
+
 }
 
 .img-block img
@@ -164,21 +170,28 @@ main-body
       gap: 16px; /* spacing between side-by-side blocks */
 }
 
+
+
 /* Rules for LARGER screen (desktop) */
 /*************************************/
 /*************************************/
 @media (min-width: 768px) 
 {
-body
+
+.contentBody
 {
     margin: auto;
     width:650px; /* fixed width, so I'll redefine everything in px now */
+    display:flex;
+    flex-direction: column;
 }
+
 
 .flavor-text
 {
     font-size:18px;
 }
+
 
 .block
 {
@@ -201,4 +214,82 @@ body
 {
     width: 60px;
 }
+
+/*Styling for margin images -- avoid messing with display or align*/
+.marginImages
+{
+    
+    display: block;
+    width: auto;
+    min-width: 200px;
+    text-align: center;
+
+}
+.marginImages:hover
+{
+    animation:wiggle 0.4s ease-in-out infinite;
+}
+
+/* Responsible for the triple column site layout */
+.columns{ 
+    display:flex;
+    flex-direction: row;
+    width: auto;
+    float: center;
+
+}
+
+}
+
+/*SPECIFIC IMAGE STYLING DATA*/
+#gnarp{ animation: wiggle 5s ease-in-out infinite; }
+#birb{animation: bob 3s ease-in-out infinite;}
+#sheep{ animation: bob 4s ease-in-out infinite;}
+#tailor{animation: inverseWiggle 4.5s ease-in-out infinite;}
+#hyena{animation: bob 5s ease-in-out infinite;}
+#goat{animation: bob 3s ease-in-out infinite;}
+
+#meWhenAstropelago:hover{animation:shake 0.4s linear infinite alternate;}
+#underConstruction{animation:shake 4s linear infinite alternate;}
+
+
+/* ANIMATIONS */
+@keyframes bob { 0% {transform: translateY(0px);} 50% {transform: translateY(-10px);} 100% {transform: translateY(0px);} }
+@keyframes wiggle { 0% {transform: rotate(-2deg);} 50% {transform: rotate(2deg);} 100% {transform: rotate(-2deg);} }
+@keyframes inverseWiggle { 0% {transform: rotate(2deg);} 50% {transform: rotate(-2deg);} 100% {transform: rotate(2deg);} }
+@keyframes boing { 0% {transform: scale(100%);} 30% {transform: scale(120%);} 100% {transform: scale(100%);} }
+
+@keyframes shake{0% {
+		transform:translate(-1px, 1px);
+}
+	10% {
+		transform:translate(0px, 0px);
+	}
+	20% {
+		transform:translate(-1px, -1px);
+	}
+	30% {
+		transform:translate(1px, 1px);
+	}
+	40% {
+		transform:translate(-1px, -1px);
+	}
+	50% {
+		transform:translate(0px, 1px);
+	}
+	60% {
+		transform:translate(-1px, -1px);
+	}
+	70% {
+		transform:translate(1px, 1px);
+	}
+	80% {
+		transform:translate(-1px, -1px);
+	}
+	90% {
+		transform:translate(1px, 1px);
+	}
+	100% {
+		transform:translate(1px, -1px);
+	}
 }
